@@ -1,0 +1,72 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+		sans-serif;
+	background: #27282E;
+	color: #fff;
+}
+
+.page-grid {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding-inline: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    column-gap: 1.5rem;
+    flex: 1;
+    height: 100%;
+}
+
+.page-grid > * {
+    grid-column: 3 / span 8;
+}
+
+@media only screen and (max-width: 768px) {
+    .page-grid {
+        padding-inline: 1rem;
+    }
+
+    .page-grid > * {
+        grid-column: 1 / -1;
+    }
+}
+
+//Global utility classes
+
+.u-text-left {
+    text-align: left;
+}
+
+.u-text-center {
+    text-align: center;
+}
+
+.u-text-right {
+    text-align: right;
+}
+
+.u-justify-left {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.u-justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+.u-justify-right {
+    display: flex;
+    justify-content: flex-end;
+}
