@@ -14,13 +14,13 @@ export function Header() {
                     </span>
                 </div>
                 <nav className={Styles.nav} aria-label="Main navigation">
-                    <a href="#about" className={Styles.navLink}>
+                    <a href="/" className={Styles.navLink}>
                         About
                     </a>
-                    <a href="#projects" className={Styles.navLink}>
+                    <a href="/projects" className={Styles.navLink}>
                         Projects
                     </a>
-                    <a href="#resume" className={Styles.navLink}>
+                    <a href="/resume" className={Styles.navLink}>
                         Resume
                     </a>
                 </nav>
