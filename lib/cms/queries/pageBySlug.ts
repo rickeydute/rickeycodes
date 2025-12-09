@@ -1,3 +1,5 @@
+import { hygraphQuery } from "@/lib/hygraph";
+
 // Types specific to this query
 
 export type ImageWidth =
@@ -108,6 +110,14 @@ export interface Page {
 
 export interface PageBySlugResponse {
     page: Page | null;
+}
+
+export async function getPageBySlug(slug: string): Promise<Page | null> {
+    const data = await hygraphQuery<PageBySlugResponse>(GET_PAGE_BY_SLUG, {
+        slug,
+    });
+
+    return data.page;
 }
 
 // GraphQL query
