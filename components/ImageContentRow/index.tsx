@@ -23,6 +23,7 @@ export function ImageContentRow({ block }: Props) {
         headingElement,
         headingAlign,
         image,
+        roundImage,
         imagePosition = "left",
         imageWidth = "P50",
         ctaLabel,
@@ -47,13 +48,17 @@ export function ImageContentRow({ block }: Props) {
         ? { flexBasis: `${textPercent}%`, maxWidth: `${textPercent}` }
         : { flexBasis: "100%", maxWidth: "100%" };
 
+    const imageClassName = roundImage
+        ? `${Styles.image} ${Styles.imageRound}`
+        : Styles.image;
+
 
     return (
         <section className={Styles.row} style={{ flexDirection: isImageLeft ? "row" : "row-reverse" }}>
             <div className={Styles.imageCol} style={imageStyle}>
                 {showImage && (
                     <div className={Styles.imageWrapper}>
-                        <img src={image!.url} alt={headingHeader || block.internalName || "Image"} className={Styles.image} />
+                        <img src={image!.url} alt={headingHeader || block.internalName || "Image"} className={imageClassName} />
                     </div>
                 )}
             </div>

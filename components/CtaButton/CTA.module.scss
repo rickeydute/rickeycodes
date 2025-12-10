@@ -1,3 +1,5 @@
+@use '../../styles/variables' as *;
+
 .button { 
     display: inline-flex;
     align-items: center;
@@ -20,26 +22,26 @@
 }
 
 .variantPrimary {
-    background: #80b5c2;
-    color: #111;
-    border-color: rgba(0, 0, 0, 0.8);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    background: $skyblue;
+    color: $charcoal;
+    border-color: $skyblue;
+    box-shadow: $btn-shadow;
 
     &:hover {
         filter: brightness(1.2);
         transform: translateY(-1px);
-        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+        box-shadow: $btn-shadow-hover;
     }
 }
 
 .variantSecondary {
-    background: transparent;
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.4);
+    background: $transparent;
+    color: $white;
+    border-color: $transparent;
 
     &:hover {
-        background: rgpba(255, 255, 255, 0.06);
-        border-color: rgba(255, 255, 255, 0.7);
+        background: $teal;
+        border-color: $teal;
     }
 }
 

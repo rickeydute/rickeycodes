@@ -58,6 +58,7 @@ export interface ImageContentRowBlock {
     headingHeader?: string | null;
     body?: RichTextBody | null;
     image?: ImageAsset | null;
+    roundImage?: boolean | null;
     imagePosition?: ImagePosition;
     imageWidth?: ImageWidth;
     ctaLabel?: string | null;
@@ -128,7 +129,7 @@ export const GET_PAGE_BY_SLUG = `
             id
             title
             slug
-            blocks {
+            blocks(first: 100) {
                 __typename
                 ... on ImageContentRow {
                     id
@@ -144,6 +145,7 @@ export const GET_PAGE_BY_SLUG = `
                         width
                         height
                     }
+                    roundImage
                     imagePosition
                     imageWidth
                     ctaLabel

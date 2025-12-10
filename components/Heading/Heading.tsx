@@ -27,18 +27,18 @@ export function Heading({
 
     const levelClass =
         element === "h1"
-        ? Styles.h1
+        ? "h1"
         : element === "h2"
-        ? Styles.h2
+        ? "h2"
         : element === "h3"
-        ? Styles.h3
+        ? "h3"
         : element === "h4"
-        ? Styles.h4
+        ? "h4"
         : element === "h5"
-        ? Styles.h5
+        ? "h5"
         : element === "h6"
-        ? Styles.h6
-        : Styles.p;
+        ? "h6"
+        : "p";
 
     const combinedClassName = [
         Styles.heading,
