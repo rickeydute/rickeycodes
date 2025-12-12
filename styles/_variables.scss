@@ -1,9 +1,11 @@
 //Breakpoints
 
-$screen-xl: 1280px;
-$screen-lg: 1024px;
-$screen-md: 768px;
-$screen-sm: 480px;
+$screen-xs: 400px;   // small phones / mobile landscape
+$screen-sm: 568px;   // larger phones / small tablets
+$screen-md: 850px;   // tablet landscape
+$screen-lg: 1024px;  // small desktop / big tablets
+$screen-xl: 1280px;  // regular laptop
+$screen-xxl: 1600px; // big monitors / TVs
 
 
 //Border radius 

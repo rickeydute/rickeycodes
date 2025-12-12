@@ -48,11 +48,17 @@
     color: #ccc;
 
     img {
-        border: $border-radius !important;
+        display: block;
+        border-radius: $border-radius !important;
         box-shadow: $btn-shadow;
-        //padding: 1rem;
-        overflow: hidden;
-        margin: 2rem 1rem;
+        overflow: contain;
+        margin: 2rem auto;
+        height: auto;
+        max-width: 100%;
+
+        @media only screen and (max-width: $screen-sm) {
+            width: 100%;
+        }
     }
 }
 
