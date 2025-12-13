@@ -1,4 +1,4 @@
-import { SpacerBlock, MarginSize } from "@/lib/cms/queries/pageBySlug";
+import { SpacerBlock, MarginSize } from "@/lib/cms/types/page";
 import Styles from "./Spacer.module.scss";
 
 function getSpaceFromMarginSize(size: MarginSize): number {

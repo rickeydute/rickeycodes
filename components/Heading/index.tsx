@@ -1,4 +1,4 @@
-import { HeadingBlock as HeadingBlockType } from "@/lib/cms/queries/pageBySlug";
+import { HeadingBlock as HeadingBlockType } from "@/lib/cms/types/page";
 import { Heading } from "./Heading";
 
 interface Props {

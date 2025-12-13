@@ -1,4 +1,4 @@
-import { CtaButtonBlock } from "@/lib/cms/queries/pageBySlug";
+import { CtaButtonBlock } from "@/lib/cms/types/page";
 import { CtaButton } from "./CTA";
 
 interface Props {

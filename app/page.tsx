@@ -1,6 +1,7 @@
 // app/page.tsx
 import { hygraphQuery } from "@/lib/hygraph";
-import { GET_PAGE_BY_SLUG, PageBySlugResponse } from "@/lib/cms/queries/pageBySlug";
+import { GET_PAGE_BY_SLUG } from "@/lib/cms/queries/pageBySlug";
+import { PageBySlugResponse } from "@/lib/cms/types/page"
 import { BlockRenderer } from "@/components/BlockRenderer";
 
 export default async function HomePage() {
@@ -25,7 +26,7 @@ export default async function HomePage() {
     }
 
     return (
-        <main>
+        <>
             {page.blocks && page.blocks.length > 0 ? (
                 page.blocks.map((block) => (
                     <BlockRenderer key={block.id} block={block} />
@@ -36,6 +37,6 @@ export default async function HomePage() {
                 </section>
             )}
             
-        </main>
+        </>
     );
 }

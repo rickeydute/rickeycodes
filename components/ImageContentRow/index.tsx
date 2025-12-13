@@ -1,4 +1,5 @@
-import { ImageContentRowBlock, ImageWidth } from "@/lib/cms/queries/pageBySlug";
+import { ImageContentRowBlock, ImageWidth } from "@/lib/cms/types/page";
+import { ContentImage } from "../ContentImage";
 import { Heading } from "../Heading/Heading";
 import { CtaButton } from "../CtaButton/CTA";
 import Styles from "./ImageContentRow.module.scss";
@@ -52,13 +53,22 @@ export function ImageContentRow({ block }: Props) {
         ? `${Styles.image} ${Styles.imageRound}`
         : Styles.image;
 
+    const altText = `${headingHeader || block.internalName || "Image"}`;
+
 
     return (
         <section className={Styles.row} style={{ flexDirection: isImageLeft ? "row" : "row-reverse" }}>
             <div className={Styles.imageCol} style={imageStyle}>
                 {showImage && (
                     <div className={Styles.imageWrapper}>
-                        <img src={image!.url} alt={headingHeader || block.internalName || "Image"} className={imageClassName} />
+                        <ContentImage 
+                            src={image.url}
+                            alt={altText}
+                            width={image.width}
+                            height={image.height}
+                            className={imageClassName}
+                            priority={true}
+                        />
                     </div>
                 )}
             </div>

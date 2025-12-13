@@ -1,0 +1,56 @@
+@use "../../styles/variables" as *;
+
+.hero {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.media {
+    position: relative;
+    width: 100%;
+}
+
+.image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    max-height: 80vh;
+    margin: 0 auto;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.2)
+    );
+    pointer-events: none;
+}
+
+.content {
+    margin-top: 1rem;
+}
+
+.ctaWrapper {
+    margin-top: 1.5rem;
+}
+
+.fullHeight .image {
+    max-height: 100vh;
+}
+
+@media only screen and (max-width: $screen-md) {
+    .image {
+        max-height: 60vh;
+    }
+}
+
+@media only screen and (max-width: $screen-sm) {
+    .image {
+        max-height: 50vh;
+    }
+}

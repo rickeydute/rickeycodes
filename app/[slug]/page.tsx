@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { hygraphQuery } from "@/lib/hygraph";
-import { GET_PAGE_BY_SLUG, type PageBySlugResponse } from "@/lib/cms/queries/pageBySlug";
+import { GET_PAGE_BY_SLUG } from "@/lib/cms/queries/pageBySlug"
+import { type PageBySlugResponse } from "@/lib/cms/types/page";
 import { BlockRenderer } from "@/components/BlockRenderer";
 
 interface PageProps {

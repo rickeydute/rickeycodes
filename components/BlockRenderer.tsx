@@ -3,13 +3,15 @@ import {
     ImageContentRowBlock,
     SpacerBlock,
     CtaButtonBlock,
-    HeadingBlock as HeadingBlockType
-} from "@/lib/cms/queries/pageBySlug";
+    HeadingBlock as HeadingBlockType,
+    HeroImageBlock as HeroImageBlockType,
+} from "@/lib/cms/types/page";
 
 import { ImageContentRow } from "./ImageContentRow";
 import { Spacer } from "./Spacer";
 import { CtaBlock } from "./CtaButton";
 import { HeadingBlock } from "./Heading";
+import { HeroImage } from "./HeroImage";
 
 interface BlockRendererProps {
     block: PageBlock;
@@ -28,6 +30,9 @@ export function BlockRenderer({ block }: BlockRendererProps) {
 
          case "Heading":
              return <HeadingBlock block={block as HeadingBlockType} />
+
+        case "HeroImage":
+            return <HeroImage block={block as HeroImageBlockType} />
 
         default:
             return null;
