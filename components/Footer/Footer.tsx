@@ -17,7 +17,7 @@ export function Footer() {
                 <div className={styles.right}>
                     {/* Fill these with your real URLs */}
                     <a
-                        href="https://www.linkedin.com/in/jose-velazquez"
+                        href="https://www.linkedin.com/in/rickey-velazquez"
                         target="_blank"
                         rel="noopener noreferrer"
                         className={styles.link}
