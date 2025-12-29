@@ -32,7 +32,7 @@ export function Footer() {
                     >
                         GitHub
                     </a>
-                    <a href="mailto:jose.velazquez.3883@gmail.com" className={styles.link}>
+                    <a href="mailto:rickeyvelazquez@proton.me" className={styles.link}>
                         Email
                     </a>
                 </div>
